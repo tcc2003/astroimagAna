@@ -1,0 +1,13 @@
+### astroimgAna ###
+
+conda create --name astroimgAna python=3.7
+pip install --upgrade pip
+pip install numpy
+pip install astropy==4.3.1
+pip install aplpy==2.0.3
+pip install jupyter
+pip install scipy
+pip install matplotlib h5py
+conda install -c conda-forge pyregion
+pip install PyAVM healpy
+pip install pandas
