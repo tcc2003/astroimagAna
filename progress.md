@@ -35,7 +35,7 @@ Record the problem and approach in installing scousepy.
          raise DistutilsError(str(e)) from e
      distutils.errors.DistutilsError: Command '['/bin/python', '-m', 'pip', '--disable-pip-version-check', 'wheel', '--no-deps', '-w', '/tmp/tmpnd24_7ps',
       '--quiet', 'extension_helpers']' returned non-zero exit status 1.
-  ```
+  ```   
 
    **approach**
   The error is due to the absence of the pip and wheel modules in my system. Run:  
