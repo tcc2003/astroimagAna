@@ -35,19 +35,18 @@ Record the problem and approach in installing scousepy.
          raise DistutilsError(str(e)) from e
      distutils.errors.DistutilsError: Command '['/bin/python', '-m', 'pip', '--disable-pip-version-check', 'wheel', '--no-deps', '-w', '/tmp/tmpnd24_7ps',
       '--quiet', 'extension_helpers']' returned non-zero exit status 1.
-  ```   
+   ```   
 
-   **approach**
-  The error is due to the absence of the pip and wheel modules in my system. Run:  
-
-  ```plaintext
+   **approach**   
+   The error is due to the absence of the pip and wheel modules in my system. Run:  
+   ```plaintext
    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   
    python get-pip.py   
    pip install wheel   
-  ```
+   ```
 
 2. problem
-   ```
+   ```plaintext
    /home/tcc/software/scousepy/.eggs/setuptools_scm-8.1.0-py3.9.egg/setuptools_scm/_integration/setuptools.py:31: RuntimeWarning: 
    ERROR: setuptools==53.0.0 is used in combination with setuptools_scm>=8.x
 
@@ -58,27 +57,27 @@ Record the problem and approach in installing scousepy.
       - migrating from the deprecated setup_requires mechanism to pep517/518
         and using a pyproject.toml to declare build dependencies
         which are reliably pre-installed before running the build tools
-  ```   
+   ```   
 
-  **approach**
-  ```
-  conda install setuptools>=61  
-  conda install setuptools_scm>=8.x # Make sure it is installed.
-  python -c "import setuptools; print(setuptools.__version__)" #Check the version
-  ```   
-  It seems that I cannot install setuptools_scm>=8.x in python 3.7 environment. Use the python 3.9 environment is better.   
+   **approach**
+   ```plaintext
+   conda install setuptools>=61  
+   conda install setuptools_scm>=8.x # Make sure it is installed.
+   python -c "import setuptools; print(setuptools.__version__)" #Check the version
+   ```      
+    It seems that I cannot install setuptools_scm>=8.x in python 3.7 environment. Use the python 3.9 environment is better.   
   
-  It may showed the version of setuptools still be the same as the older one. The issue arises because I am using different Python interpreters    
-  or pip installation tools in different environments, leading to version inconsistencies. Run the following command to check :
-  ```
-  which python
-  which pip
-  ```
-  If the paths are different, run ```vim ~/.bashrc``` and modify ```export PATH=/bin:$PATH``` to ```export PATH="/home/tcc/software/anaconda3/envs/test/bin:$PATH"```.
+    It may showed the version of setuptools still be the same as the older one. The issue arises because I am using different Python interpreters
+    or pip installation tools in different environments, leading to version inconsistencies. Run the following command to check :
+    ```plaintext
+    which python
+    which pip
+    ```
+    If the paths are different, run ```vim ~/.bashrc``` and modify ```export PATH=/bin:$PATH``` to ```export PATH="/home/tcc/software/anaconda3/envs/test/bin:$PATH"```.
 
-3. problem
+4. problem   
    After running ```python setup.py install```, I get the error message
-   ```
+   ```plaintext
    /home/tcc/software/anaconda3/envs/test/lib/python3.9/site-packages/setuptools/__init__.py:85: _DeprecatedInstaller: setuptools.installer and fetch_build_eggs are deprecated.
    !!
 
@@ -119,7 +118,7 @@ Record the problem and approach in installing scousepy.
    running egg_info
    error: Cannot update time stamp of directory 'scousepy.egg-info'
    ```
-   **approach**
+    **approach**
    
 
 
