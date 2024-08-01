@@ -38,11 +38,12 @@ Record the problem and approach in installing scousepy.
   ```
 
   **approach**
-  The error is due to the absence of the pip and wheel modules in my system. Run:   
+  The error is due to the absence of the pip and wheel modules in my system. Run:  
+
   ```
-  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-  python get-pip.py
-  pip install wheel
+  curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   
+  python get-pip.py   
+  pip install wheel   
   ```
 
 2. problem
