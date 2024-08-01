@@ -1,8 +1,7 @@
 Record the problem and approach in installing scousepy.
 
 1. problem
-   ```
-   WARNING: The wheel package is not available.
+   ```WARNING: The wheel package is not available.
    /bin/python: No module named pip
    Traceback (most recent call last):
        File "/usr/lib/python3.9/site-packages/setuptools/installer.py", line 75, in fetch_build_egg
@@ -40,8 +39,7 @@ Record the problem and approach in installing scousepy.
 **approach**
   The error is due to the absence of the pip and wheel modules in my system. Run:  
 
-  ```
-   curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   
+  ```curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   
    python get-pip.py   
    pip install wheel   
   ```
