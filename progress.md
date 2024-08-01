@@ -37,13 +37,13 @@ Record the problem and approach in installing scousepy.
       '--quiet', 'extension_helpers']' returned non-zero exit status 1.
   ```
 
-  **approach**
+**approach**
   The error is due to the absence of the pip and wheel modules in my system. Run:  
 
   ```
-     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   
-     python get-pip.py   
-     pip install wheel   
+   curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py   
+   python get-pip.py   
+   pip install wheel   
   ```
 
 2. problem
