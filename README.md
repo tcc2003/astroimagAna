@@ -16,8 +16,7 @@ Enhance the S/N ratio to make the relatively weak line visible.
 ## Instruction
 Ensure that all necessary dependencies are installed. Before installation, use `Anaconda3` to manage the development environment. You can type:   
 ```
-conda create --name astroimgAna python=3.7      
-conda install -c conda-forge pyregion   
+conda create --name astroimgAna python=3.7        
 pip install --upgrade pip      
 pip install numpy scipy pandas matplotlib   
 pip install astropy==4.3.1   
