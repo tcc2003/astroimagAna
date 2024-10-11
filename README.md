@@ -32,3 +32,4 @@ pip install PyAVM healpy
    
 
 ## Reference
+Linder, R. R., et al. 2015, ApJ, 149:138 
